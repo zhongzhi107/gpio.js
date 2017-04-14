@@ -1,6 +1,6 @@
 {
   "name": "gpio.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple interface to GPIO devices with Raspberry Pi using nodejs and promise.",
   "main": "lib/index.js",
   "files": [
@@ -10,6 +10,7 @@
   "scripts": {
     "start": "bable-node index.js",
     "test": "mocha --recursive --compilers js:babel-core/register",
+    "test1": "sudo babel-node test/index.js",
     "build": "babel src --out-dir lib",
     "prerelease": "npm run build",
     "release": "standard-version",
@@ -26,7 +27,10 @@
     "promise",
     "es6"
   ],
-  "author": "zhongzhi107",
+  "author": {
+    "name": "Zhi Zhong",
+    "email": "zhong.zhi@163.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
