@@ -6,6 +6,8 @@ const channel = 11;
 
 gpio.setMode(GPIO.MODE.BOARD);
 gpio.setup(channel, GPIO.DIR.OUT);
-gpio.output(channel, GPIO.SIGNAL.HIGH).then(() => {
-  console.log('ok');
-});
+setTimeout(() => {
+  gpio.output(channel, GPIO.SIGNAL.HIGH).then(() => {
+    console.log('ok');
+  });
+}, 1000);

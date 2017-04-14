@@ -215,7 +215,8 @@ export default class GPIO extends EventEmitter {
     channel = this._getBcmCode(channel);
     return GPIO.writeFile('export', channel)
       .then(() => this._direction(channel, direction))
-      .then(() => this._setValue(channel, initial));
+      .then(() => this._setValue(channel, initial))
+      .catch(e => console.log(e));
   }
 
   output(channel, value) {

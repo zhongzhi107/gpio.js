@@ -8,7 +8,7 @@
     "src"
   ],
   "scripts": {
-    "start": "bable-node index.js",
+    "start": "babel-node -e",
     "test": "mocha --recursive --compilers js:babel-core/register",
     "test1": "sudo babel-node test/index.js",
     "build": "babel src --out-dir lib",
